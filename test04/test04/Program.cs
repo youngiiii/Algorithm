@@ -19,6 +19,7 @@ namespace test04
             //위의 그림을 출력하시오
             //C언어를 배우고 싶다는 친구에게 문제를 냈는데 특수문자 출력관련해서 test해봄
 
+
             Console.WriteLine("\\    /\\");
             Console.WriteLine(" )  ( ')");
             Console.WriteLine("(  /  )");
