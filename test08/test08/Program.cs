@@ -35,22 +35,22 @@ namespace test08
             //  ***
             // ****
             //*****
-            //builder = new StringBuilder();
-            //for (int i = 0; i < num; i++)
-            //{
-            //    for (int j = i; j < num - i; j++)
-            //    {
-            //        builder.Append(" ");
-            //    }
+            builder = new StringBuilder();
+            for (int i = 0; i < num; i++)
+            {
+                for (int j = 0; j < num - (i + 1); j++)
+                {
+                    builder.Append(" ");
+                }
 
-            //    for (int j = 0; j < (i + 1); j++)
-            //    {
-            //        builder.Append("*");
-            //    }
-            //    builder.Append("\n");
-            //}
-            //Console.WriteLine(builder.ToString());
-            //Console.ReadLine();
+                for (int j = 0; j < (i + 1); j++)
+                {
+                    builder.Append("*");
+                }
+                builder.Append("\n");
+            }
+            Console.WriteLine(builder.ToString());
+            Console.ReadLine();
         }
     }
 }
