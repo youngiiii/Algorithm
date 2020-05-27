@@ -33,9 +33,11 @@ namespace test13
             {
                 list.Add(int.Parse(item));
             }
+
             list.Sort(delegate (int x, int y) {
                 return (x > y) ? 1 : (x < y) ? -1 : 0;
             });
+
             Console.WriteLine(list[1]);
             Console.ReadLine();
         }
