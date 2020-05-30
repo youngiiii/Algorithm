@@ -39,7 +39,6 @@ namespace test13
             });
 
             Console.WriteLine(list[1]);
-            Console.ReadLine();
         }
     }
 }
