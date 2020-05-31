@@ -37,7 +37,6 @@ namespace test13
             list.Sort(delegate (int x, int y) {
                 return (x > y) ? 1 : (x < y) ? -1 : 0;
             });
-
             Console.WriteLine(list[1]);
         }
     }
