@@ -34,6 +34,7 @@ namespace test20
                 Console.WriteLine(cnt);
                 Console.ReadLine();
             }
+
         }
 
         /// <summary>
