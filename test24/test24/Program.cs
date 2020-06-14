@@ -30,20 +30,17 @@ namespace test24
             var input = Console.ReadLine().Split(" ").Select(s => int.Parse(s)).ToList(); //고정비
             int a = input[0]; //고정비
             int b = input[1]; //인건비
-            int total = a;
-
             int sal = input[2];//판매가격
-
-
+            
             int salCnt = 0;//판매개수
 
             //손익분기점이 존재하지 않을 경우
             if (b < sal) Console.WriteLine(-1);
 
-            while ((sal * salCnt) < total)
+            while ((sal * salCnt) < a)
             {
-                total += b;
-                salCnt += 1;
+                a += b; //고정비 + 인건비
+                salCnt += 1; //판매 개수
             }
             Console.WriteLine(salCnt + 1);
         }
