@@ -35,19 +35,23 @@ namespace test19
             bool[] arr = new bool[10001];
             arr = arr.Select(s => s = true).ToArray();
 
-            for (int i = 0; i < arr.Length - 1; i++)
+            for (int i = 1; i < arr.Length - 1; i++)
             {
-                //if (arr[i] == false) continue;
-                if (pg.Calc(i + 1) > (arr.Length - 1)) continue;
-                arr[pg.Calc(i + 1)] = false;
+                if (pg.Calc(i) > (arr.Length - 1)) continue;
+                arr[pg.Calc(i)] = false;
             }
 
             for (int i = 1; i < arr.Length - 1; i++)
             {
-                if (arr[i] == true)
-                    Console.WriteLine(i);
+                if (arr[i] == true) Console.WriteLine(i);
             }
         }
+
+        /// <summary>
+        /// 셀프넘버 check
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         private int Calc(int number)
         {
             var result = new List<int>();

@@ -19,6 +19,7 @@ namespace test18
 
             int cnt = int.Parse(Console.ReadLine());
             var goalLst = new List<List<int>>();
+
             for (int i = 0; i < cnt; i++)
             {
                 var goal = Console.ReadLine().ToString().Split(" ").Select(s => int.Parse(s)).ToList();
