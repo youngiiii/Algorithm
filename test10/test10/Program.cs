@@ -32,16 +32,16 @@ namespace test10
             //Console.ReadLine();
 
             //두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
-            int num = 0;
+            //int num = 0;
+            var str = Console.ReadLine().Split(' ').Select(s => int.Parse(s)).ToList();
             StringBuilder builder = new StringBuilder();
             while (num < 5)
             {
-                string[] a = Console.ReadLine().Split(' ');
-                builder.Append((int.Parse(a[0]) + int.Parse(a[1])) + "\n");
+                //string[] a = Console.ReadLine().Split(' ');
+                builder.Append((str[0] + str[1]) + "\n");
                 num++;
             }
             Console.WriteLine(builder.ToString());
-            Console.ReadLine();
         }
     }
 }
