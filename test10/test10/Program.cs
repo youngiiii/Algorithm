@@ -35,11 +35,11 @@ namespace test10
             //int num = 0;
             var str = Console.ReadLine().Split(' ').Select(s => int.Parse(s)).ToList();
             StringBuilder builder = new StringBuilder();
-            while (num < 5)
+            while (str.First() < 5)
             {
                 //string[] a = Console.ReadLine().Split(' ');
                 builder.Append((str[0] + str[1]) + "\n");
-                num++;
+                str[0]++;
             }
             Console.WriteLine(builder.ToString());
         }
