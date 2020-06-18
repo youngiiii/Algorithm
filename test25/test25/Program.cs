@@ -7,58 +7,47 @@ namespace test25
     {
         static void Main(string[] args)
         {
-            var num = 14;//int.Parse(Console.ReadLine());
+            Program pg = new Program();
+            var num = int.Parse(Console.ReadLine());
 
-            List<int> up = new List<int>();
-            List<int> dn = new List<int>();
+            List<int> up = new List<int>(); //분자
+            List<int> dn = new List<int>(); //분모
 
             for (int i = 1; i < num; i++)
             {
-                int tmp = 1;
                 if (i % 2 == 1) //홀수인 경우(분자)
                 {
-                    //1
-                    //1,2,3,2,1
-                    for (int j = 1; j < (i * 2); j++)
-                    {
-                        if (i > j)
-                        {
-                            up.Add(tmp++);
-                        }
-                        else if (i == j)
-                        {
-                            up.Add(tmp);
-                            tmp--;
-                        }
-                        else if (i < j)
-                        {
-                            up.Add(tmp--);
-                        }
-                    }
+                    pg.AddList(i, up);
                 }
                 else //짝수인 경우(분모)
                 {
-                    //1
-                    //1,2,3,2,1
-                    for (int j = 1; j < (i * 2); j++)
-                    {
-                        if (i > j)
-                        {
-                            dn.Add(tmp++);
-                        }
-                        else if (i == j)
-                        {
-                            dn.Add(tmp);
-                            tmp--;
-                        }
-                        else if (i < j)
-                        {
-                            dn.Add(tmp--);
-                        }
-                    }
+                    pg.AddList(i, dn);
                 }
             }
-            Console.WriteLine(up[num + 1] + " / " + dn[num + 1]);
+            //결과 출력
+            Console.WriteLine(up[num -1] + "/" + dn[num - 1]);
+        }
+
+        private void AddList(int i, List<int> lst)
+        {
+            int tmp = 1;
+
+            for (int j = 1; j < (i * 2); j++)
+            {
+                if (i > j)
+                {
+                    lst.Add(tmp++);
+                }
+                else if (i == j)
+                {
+                    lst.Add(tmp);
+                    tmp--;
+                }
+                else if (i < j)
+                {
+                    lst.Add(tmp--);
+                }
+            }
         }
     }
 }
