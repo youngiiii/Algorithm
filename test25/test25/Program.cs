@@ -21,16 +21,16 @@ namespace test25
                     //1,2,3,2,1
                     for (int j = 1; j < (i * 2); j++)
                     {
-                        if (i > tmp)
+                        if (i > j)
                         {
                             up.Add(tmp++);
                         }
-                        else if (i == tmp)
+                        else if (i == j)
                         {
                             up.Add(tmp);
                             tmp--;
                         }
-                        else if (i < tmp)
+                        else if (i < j)
                         {
                             up.Add(tmp--);
                         }
@@ -42,22 +42,23 @@ namespace test25
                     //1,2,3,2,1
                     for (int j = 1; j < (i * 2); j++)
                     {
-                        if (i > tmp)
+                        if (i > j)
                         {
                             dn.Add(tmp++);
                         }
-                        else if(i == tmp)
+                        else if (i == j)
                         {
                             dn.Add(tmp);
                             tmp--;
                         }
-                        else if (i < tmp)
+                        else if (i < j)
                         {
                             dn.Add(tmp--);
-                        }   
+                        }
                     }
                 }
             }
+            Console.WriteLine(up[num + 1] + " / " + dn[num + 1]);
         }
     }
 }
