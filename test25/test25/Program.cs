@@ -23,6 +23,10 @@ namespace test25
                 {
                     pg.AddList(i, dn);
                 }
+                if (num < up.Count && num < dn.Count)
+                {
+                    break;
+                }
             }
             //결과 출력
             Console.WriteLine(up[num -1] + "/" + dn[num - 1]);
