@@ -46,7 +46,7 @@ namespace test26
             int bc = int.Parse(str[2]) - int.Parse(str[1]);// 노트북 판매가 - 재료비, 인건비
 
             //출력
-            Console.WriteLine(bc < 0 || bc == 0  ? - 1 : (a / bc) + 1);
+            Console.WriteLine(bc <= 0  ? - 1 : (a / bc) + 1);
         }
     }
 }
